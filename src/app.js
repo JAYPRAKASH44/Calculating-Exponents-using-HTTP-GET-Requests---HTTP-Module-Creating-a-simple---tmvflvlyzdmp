@@ -20,7 +20,8 @@ const server = http.createServer((req, res) => {
         res.write(`The result is ${value}`);
       } else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
-        res.write('Bad input');
+
+       res.end(`The operation cannot be performed`);
       }
       res.end();
 
